@@ -4,7 +4,7 @@ on:
    - main
 jobs:
   zap_scan:
-    runs-on: [self-hosted, linux, ARM64]
+    runs-on: [self-hosted, linux, x64]
     name: Scan the webapplication
     steps:
       - name: Checkout
