@@ -1,11 +1,11 @@
 name: example1
 on:
   push:
-    branches: [main]
+    branches: master
 jobs:     
   build:
     name: Build
-    runs on:
+    runs on: self-hosted
     steps:
     - name: checkout
       uses: actions/checkout@v2
