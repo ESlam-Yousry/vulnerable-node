@@ -1,10 +1,26 @@
+name: first-workflow
+
 on: 
   push:
     branches:
       - master
-name: sample daast scan
-steps:
-  - name: ZAP Scan
-    uses: zaproxy/action-full-scan@v0.3.0
-    with:
-      target: 'https://www.zaproxy.org/'
+      
+jobs:     
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: Hello  
+      run: |
+        echo "Hello world from self hosted runner!"
+        
+  sample-daast-scan:     
+    name: sample-daast-scan 
+    runs-on: self-hosted
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.3.0
+        with:
+          target: 'https://www.zaproxy.org/'
