@@ -6,15 +6,15 @@ on:
       - master
       
 jobs:     
-  build:
-    name: Build
-    runs-on: self-hosted
-    steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: Hello  
-      run: |
-        echo "Hello world from self hosted runner!"
+#  build:
+#    name: Build
+#    runs-on: self-hosted
+#    steps:
+#    - name: checkout
+#      uses: actions/checkout@v2
+#    - name: Hello  
+#      run: |
+#        echo "Hello world from self hosted runner!"
         
   sample-daast-scan:     
     name: sample-daast-scan 
